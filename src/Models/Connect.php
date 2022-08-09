@@ -13,7 +13,7 @@ class Connect {
     {
         $this->usuario = 'root';
         $this->senha = '';
-        $this->database = empty($database) ? 'admin' : $this->setDatabase($database);
+        $this->database = $database;
         $this->host = 'localhost';
 
         $this->connectMysqli();
