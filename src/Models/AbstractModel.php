@@ -6,8 +6,8 @@ use models\connect\Connect;
 
 abstract class AbstractModel extends Connect {
 
-    abstract public function insert();
-    abstract public function update();
+    abstract public function insert($data);
+    abstract public function update($data);
     abstract public function delete($data);
 }
 ?>

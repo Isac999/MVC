@@ -7,11 +7,11 @@ use models\crud\AbstractModel;
 class Books extends AbstractModel {
     protected string $data;
 
-    public function insert() {
+    public function insert($data) {
 
     }
 
-    public function update() {
+    public function update($data) {
 
     }
 
