@@ -33,14 +33,15 @@ function del(id, parente) {
         tr.remove();
 
         const body = {
-            "id": id
+            "id": id,
+            "operation": "delete"
         }
         
         var table_name = document.querySelector('#table_name').value;
         table_name = table_name[0].toUpperCase() + table_name.substr(1);
         let url = "http://127.0.0.1/MVC/src/Controller/";
         url = url + table_name + 'Controller.php';
-        
+
         let request = new XMLHttpRequest();
         request.open("POST", url, true);
         request.setRequestHeader("Content-Type", "application/json");
