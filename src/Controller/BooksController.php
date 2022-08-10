@@ -7,6 +7,11 @@ use models\crud\Books;
 class BooksController {
 
     public function __construct($json) {
+
+        $list = explode(',"operation":', $json);
+        $json = str_replace('{', '', $list[0]);
+        $operation = str_replace(['}', '"'], '', $list[1]);
+        
         $connect = new Books('library');
         //$connect->update($json);
         //$connect->insert($json);
@@ -16,6 +21,6 @@ class BooksController {
 }
 
 $json = file_get_contents('php://input');
-echo $json;
 $conn = new BooksController($json);
+
 ?>

@@ -143,7 +143,8 @@ function undoChange(element) {
 function update(tableName, listValues) {
     const body = { 
         //"table" : tableName, 
-        "arrayValues" : listValues
+        "arrayValues" : listValues,
+        "operation": "update"
     }
 
     tableName = tableName[0].toUpperCase() + tableName.substr(1);
@@ -164,7 +165,8 @@ function update(tableName, listValues) {
 function createData(tableName, listValues) {
     const body = { 
         //"table" : tableName, 
-        "arrayValues" : listValues
+        "arrayValues" : listValues,
+        "operation" : "insert"
     }
     tableName = tableName[0].toUpperCase() + tableName.substr(1);
     let url = "http://127.0.0.1/MVC/src/Controller/";
