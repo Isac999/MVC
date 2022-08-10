@@ -135,7 +135,7 @@ function undoChange(element) {
 
 function update(tableName, listValues) {
     const body = { 
-        "table" : tableName, 
+        //"table" : tableName, 
         "arrayValues" : listValues
     }
     let request = new XMLHttpRequest();
@@ -151,7 +151,7 @@ function update(tableName, listValues) {
 
 function createData(tableName, listValues) {
     const body = { 
-        "table" : tableName, 
+        //"table" : tableName, 
         "arrayValues" : listValues
     }
     let request = new XMLHttpRequest();

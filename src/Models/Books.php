@@ -9,18 +9,16 @@ class Books extends AbstractModel {
     public function __construct() {
 
     }
-    
+
     public function insert($json) : bool
     {
         $data = $json;
-        $data = str_replace([":", "table", "}", "{"], "", $data);
-
+        $data = str_replace([":", "}", "{"], "", $data);
+        
         $list = explode("arrayValues", $data);
-        $table_name = str_replace(['"', ','], "", $list[0]);
         $listData = str_replace(['"', '[', ']'], "", $list[1]);
         $listData = explode(',', $listData);
 
-        echo $table_name;
         print_r($listData);
 
         $exec = "INSERT INTO `books` (`id`, `name`, `genre`, `author`, `library_id`) VALUES ('$listData[0]', '$listData[1]', '$listData[2]', '$listData[3]', '$listData[4]')";
@@ -28,18 +26,17 @@ class Books extends AbstractModel {
         return true;
     }
 
-    public function update($json) {
+    public function update($json) : bool
+    {
         $data = $json;
-        $data = str_replace([":", "table", "}", "{"], "", $data);
-        $list = explode("arrayValues", $data);
+        $data = str_replace([":", "}", "{"], "", $data);
 
-        $table_name = str_replace(['"', ','], "", $list[0]);
+        $list = explode("arrayValues", $data);
         $listData = str_replace(['"', '[', ']'], "", $list[1]);
         $listData = explode(',', $listData);
 
-        echo $table_name;
         print_r($listData);
-
+        
         $columns = array();
         $exec_columns = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'library' AND TABLE_NAME = 'books'";
         $selectColumns = $this->mysqli->query($exec_columns) or die('Erro ao consultar colunas');

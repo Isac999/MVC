@@ -8,7 +8,7 @@ class BooksController {
 
     public function __construct($json) {
         $connect = new Books('library');
-        $connect->update($json);
+        //$connect->update($json);
         //$connect->insert($json);
         //$connect->delete($json);
     }
