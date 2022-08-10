@@ -16,5 +16,6 @@ class BooksController {
 }
 
 $json = file_get_contents('php://input');
+echo $json;
 $conn = new BooksController($json);
 ?>

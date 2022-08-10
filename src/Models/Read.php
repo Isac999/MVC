@@ -56,6 +56,7 @@ class Read extends Connect {
 
     public function headerRender($table) : void
     {
+        echo "<input type='hidden' id='table_name' value=".$this->table.">";
         $this->columns = array();
         $exec_columns = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '".$this->getDatabase()."' AND TABLE_NAME = '$table'";
         $selectColumns = $this->mysqli->query($exec_columns) or die('Erro ao consultar colunas');

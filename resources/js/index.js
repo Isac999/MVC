@@ -35,8 +35,14 @@ function del(id, parente) {
         const body = {
             "id": id
         }
+        
+        var table_name = document.querySelector('#table_name').value;
+        table_name = table_name[0].toUpperCase() + table_name.substr(1);
+        let url = "http://127.0.0.1/MVC/src/Controller/";
+        url = url + table_name + 'Controller.php';
+        
         let request = new XMLHttpRequest();
-        request.open("POST", "http://127.0.0.1/MVC/src/Controller/BooksController.php", true);
+        request.open("POST", url, true);
         request.setRequestHeader("Content-Type", "application/json");
         request.send(JSON.stringify(body)); 
     
@@ -138,8 +144,13 @@ function update(tableName, listValues) {
         //"table" : tableName, 
         "arrayValues" : listValues
     }
+
+    tableName = tableName[0].toUpperCase() + tableName.substr(1);
+    let url = "http://127.0.0.1/MVC/src/Controller/";
+    url = url + tableName + 'Controller.php';
+
     let request = new XMLHttpRequest();
-    request.open("POST", "http://127.0.0.1/MVC/src/Controller/BooksController.php", true);
+    request.open("POST", url, true);
     request.setRequestHeader("Content-Type", "application/json");
     request.send(JSON.stringify(body)); 
 
@@ -154,8 +165,12 @@ function createData(tableName, listValues) {
         //"table" : tableName, 
         "arrayValues" : listValues
     }
+    tableName = tableName[0].toUpperCase() + tableName.substr(1);
+    let url = "http://127.0.0.1/MVC/src/Controller/";
+    url = url + tableName + 'Controller.php';
+
     let request = new XMLHttpRequest();
-    request.open("POST", "http://127.0.0.1/MVC/src/Controller/BooksController.php", true);
+    request.open("POST", url, true);
     request.setRequestHeader("Content-Type", "application/json");
     request.send(JSON.stringify(body)); 
 
