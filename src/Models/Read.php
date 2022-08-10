@@ -81,7 +81,7 @@ class Read extends Connect {
             }
             echo "<td class='no-replace'>";
             echo "<button onclick='change(this.parentElement)' class='btn btn-info' id='".$this->table."'>Edit</button>";
-            echo "<button onclick='del(this.id, this.parentElement)' class='btn btn-danger ml-1' id='".$data["id"]."-".$this->table."'>Delete</button>";
+            echo "<button onclick='del(this.id, this.parentElement)' class='btn btn-danger ml-1' id='".$data["id"]."'>Delete</button>";
             echo "</td>";
             echo "</tr>";
         }

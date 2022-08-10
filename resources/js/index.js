@@ -36,7 +36,7 @@ function del(id, parente) {
             "id": id
         }
         let request = new XMLHttpRequest();
-        request.open("POST", "http://127.0.0.1/CRUD/models/Delete.php", true);
+        request.open("POST", "http://127.0.0.1/MVC/src/Controller/BooksController.php", true);
         request.setRequestHeader("Content-Type", "application/json");
         request.send(JSON.stringify(body)); 
     
