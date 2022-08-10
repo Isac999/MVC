@@ -5,7 +5,11 @@ require_once('../Models/AbstractModel.php');
 use models\crud\AbstractModel;
 
 class Books extends AbstractModel {
+    
+    public function __construct() {
 
+    }
+    
     public function insert($json) : bool
     {
         $data = $json;
