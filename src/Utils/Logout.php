@@ -1,5 +1,5 @@
 <?php 
-    namespace models\utils;
+    namespace utils;
 
     require_once('./src/Models/Connect.php');
     use models\connect\Connect;
