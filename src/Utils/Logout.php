@@ -13,7 +13,7 @@ class Logout extends Connect {
         }
         
         session_destroy();
-        header("Location: ../../login.php");
+        header("Location: ../../login");
     }
 
 }
