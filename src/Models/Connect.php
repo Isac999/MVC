@@ -11,11 +11,17 @@ class Connect {
 
     public function __construct(string $database)
     {
-        $this->usuario = 'root';
-        $this->senha = '';
-        $this->database = $database;
-        $this->host = 'localhost';
-
+        $data = parse_ini_file('/opt/lampp/htdocs/MVC/config.ini');
+        
+        $this->usuario = $data["mysql_root"];
+        $this->senha = $data["mysql_pass"];
+        $this->host = $data["mysql_host"];
+        
+        if (!isset($database) && empty($database)) {
+            $this->database = $data["mysql_database"];
+        } else {
+            $this->setDatabase($database);
+        }
         $this->connectMysqli();
     }
 
