@@ -21,7 +21,6 @@ class SuppliersController {
             switchOperation($operation, $json, $connect);
             return true;
         } catch (Exception $e) {
-            echo $e;
             return false;
         }
     }
