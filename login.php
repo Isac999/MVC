@@ -1,6 +1,8 @@
 <?php 
-require_once('./src/Models/Connect.php');
-use \models\connect\Connect;
+//require_once('./src/Models/Connect.php');
+require_once('./Autoload.php');
+
+use src\Models\Connect;
 
 $conn1 = new Connect('admin');
 

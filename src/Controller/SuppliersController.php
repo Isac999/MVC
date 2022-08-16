@@ -1,12 +1,12 @@
 <?php 
-namespace controller;
+namespace src\Controller;
 
-require_once('../Models/Suppliers.php');
-require_once('../Utils/switchOperation.php');
+//require_once('../Models/Suppliers.php');
+//require_once('../Utils/switchOperation.php');
 
 use Exception;
-use models\crud\Suppliers;
-use function utils\switchOperation;
+use src\Models\Suppliers;
+use function src\Utils\switchOperation;
 
 class SuppliersController {
 

@@ -1,8 +1,9 @@
 <?php 
-namespace utils;
+namespace src\Utils;
 
-require_once('../Models/Connect.php');
-use models\connect\Connect;
+//require_once('../Models/Connect.php');
+require_once('../../Autoload.php');
+use src\Models\Connect;
 
 class Logout extends Connect {
 

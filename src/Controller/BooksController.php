@@ -1,12 +1,13 @@
 <?php 
-namespace controller;
+namespace src\Controller;
 
-require_once('../Models/Books.php');
-require_once('../Utils/switchOperation.php');
+//require_once('../Models/Books.php');
+//require_once('../Utils/switchOperation.php');
+require_once('../../Autoload.php');
 
 use Exception;
-use models\crud\Books;
-use function utils\switchOperation;
+use src\Models\Books;
+use function src\Utils\switchOperation;
 
 class BooksController {
 

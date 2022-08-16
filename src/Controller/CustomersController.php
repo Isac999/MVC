@@ -1,12 +1,13 @@
 <?php 
-namespace controller;
+namespace src\Controller;
 
-require_once('../Models/Customers.php');
-require_once('../Utils/switchOperation.php');
+//require_once('../Models/Customers.php');
+//require_once('../Utils/switchOperation.php');
+require_once('../../Autoload.php');
 
 use Exception;
-use models\crud\Customers;
-use function utils\switchOperation;
+use src\Models\Customers;
+use function src\Utils\switchOperation;
 
 class CustomersController {
 

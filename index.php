@@ -1,6 +1,7 @@
 <?php 
-    require_once('./src/Models/Read.php'); 
-    use \models\crud\Read;
+    //require_once('./src/Models/Read.php'); 
+    require_once('./Autoload.php');
+    use src\Models\Read;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

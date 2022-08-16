@@ -1,8 +1,8 @@
 <?php 
-namespace models\crud;
+namespace src\Models;
 
-require_once('../Models/AbstractModel.php');
-use models\crud\AbstractModel;
+//require_once('../Models/AbstractModel.php');
+use src\Models\AbstractModel;
 
 class Books_rentals extends AbstractModel {
     

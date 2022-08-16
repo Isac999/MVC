@@ -1,8 +1,9 @@
 <?php 
-namespace models\crud;
+namespace src\Models;
 
-require_once('../Models/Connect.php');
-use models\connect\Connect;
+//require_once('../Models/Connect.php');
+include_once('../../Autoload.php');
+use src\Models\Connect;
 
 abstract class AbstractModel extends Connect {
 

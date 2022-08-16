@@ -1,8 +1,9 @@
 <?php 
-namespace models\crud;
+namespace src\Models;
 
-require_once('../Models/AbstractModel.php');
-use models\crud\AbstractModel;
+//require_once('../Models/AbstractModel.php');
+require_once('../../Autoload.php');
+use src\Models\AbstractModel;
 
 class Suppliers extends AbstractModel {
     

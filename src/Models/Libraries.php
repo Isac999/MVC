@@ -1,8 +1,8 @@
 <?php 
-namespace models\crud;
+namespace src\Models;
 
 require_once('../Models/AbstractModel.php');
-use models\crud\AbstractModel;
+use src\Models\AbstractModel;
 
 class Libraries extends AbstractModel {
     

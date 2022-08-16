@@ -1,12 +1,12 @@
 <?php 
-namespace controller;
+namespace src\Controller;
 
-require_once('../Models/Libraries.php');
-require_once('../Utils/switchOperation.php');
+//require_once('../Models/Libraries.php');
+//require_once('../Utils/switchOperation.php');
 
 use Exception;
-use models\crud\Libraries;
-use function utils\switchOperation;
+use src\Models\Libraries;
+use function src\Utils\switchOperation;
 
 class LibrariesController {
 

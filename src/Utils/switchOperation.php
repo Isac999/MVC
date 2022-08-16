@@ -1,5 +1,5 @@
 <?php 
-namespace utils;
+namespace src\Utils;
 
 function switchOperation($operation, $json, $connect) {
     
