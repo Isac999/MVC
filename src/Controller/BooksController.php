@@ -1,9 +1,8 @@
 <?php 
 namespace src\Controller;
 
-//require_once('../Models/Books.php');
-//require_once('../Utils/switchOperation.php');
-require_once('../../Autoload.php');
+require_once('../Utils/switchOperation.php');
+require_once('/opt/lampp/htdocs/MVC/Autoload.php');
 
 use Exception;
 use src\Models\Books;
@@ -16,7 +15,8 @@ class BooksController {
         $list = explode(',"operation":', $json);
         $operation = str_replace(['}', '"'], '', $list[1]);
         $json = str_replace(['{', ':', 'id', '"'], '', $list[0]);
-
+        echo $json;
+        
         try {
             $connect = new Books('library');
             switchOperation($operation, $json, $connect);
@@ -25,7 +25,6 @@ class BooksController {
             echo $e;
             return false;
         } 
-         
     }
 }
 $json = file_get_contents('php://input');

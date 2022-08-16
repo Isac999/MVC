@@ -1,8 +1,7 @@
 <?php 
 namespace src\Models;
 
-//require_once('../Models/AbstractModel.php');
-require_once('../../Autoload.php');
+require_once('/opt/lampp/htdocs/MVC/Autoload.php');
 use src\Models\AbstractModel;
 
 class Books extends AbstractModel {

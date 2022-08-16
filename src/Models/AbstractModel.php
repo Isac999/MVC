@@ -1,8 +1,7 @@
 <?php 
 namespace src\Models;
 
-//require_once('../Models/Connect.php');
-include_once('../../Autoload.php');
+include_once('/opt/lampp/htdocs/MVC/Autoload.php');
 use src\Models\Connect;
 
 abstract class AbstractModel extends Connect {

@@ -9,8 +9,7 @@ if (!isset($_SESSION['id'])) {
     die("Você não tem acesso a está página! Faça login <a href='./login.php'>clicando aqui</a>");
 }
 
-//require_once('./src/Models/Connect.php');
-require_once('./Autoload.php');
+require_once('/opt/lampp/htdocs/MVC/Autoload.php');
 use src\Models\Connect;
 
 class Read extends Connect {

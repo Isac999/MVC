@@ -1,8 +1,7 @@
 <?php 
 namespace src\Utils;
 
-//require_once('../Models/Connect.php');
-require_once('../../Autoload.php');
+require_once('/opt/lampp/htdocs/MVC/Autoload.php');
 use src\Models\Connect;
 
 class Logout extends Connect {

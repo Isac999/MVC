@@ -8,8 +8,7 @@ class Autoload
             $class = str_replace('\\', '/', $class);
             $class = __DIR__ . "/" . $class;
             $class = $class . ".php";
-            
-            include_once($class);
+            include($class);
         });
     }
 }

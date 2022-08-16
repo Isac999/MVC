@@ -1,8 +1,7 @@
 <?php 
 namespace src\Models;
 
-//include_once('../Models/AbstractModel.php');
-include_once('../../Autoload.php');
+include_once('/opt/lampp/htdocs/MVC/Autoload.php');
 use src\Models\AbstractModel;
 
 class Requests_to_suppliers extends AbstractModel {

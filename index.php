@@ -1,6 +1,6 @@
 <?php 
     //require_once('./src/Models/Read.php'); 
-    require_once('./Autoload.php');
+    require_once('/opt/lampp/htdocs/MVC/Autoload.php');
     use src\Models\Read;
 ?>
 <!DOCTYPE html>

@@ -1,8 +1,8 @@
 <?php 
 namespace src\Controller;
 
-//require_once('../Models/Libraries.php');
-//require_once('../Utils/switchOperation.php');
+require_once('../Utils/switchOperation.php');
+require_once('/opt/lampp/htdocs/MVC/Autoload.php');
 
 use Exception;
 use src\Models\Libraries;
