@@ -39,6 +39,7 @@ function del(id, parente) {
         
         var table_name = document.querySelector('#table_name').value;
         table_name = table_name[0].toUpperCase() + table_name.substr(1);
+        table_name = table_name.replaceAll("_", "");
         let url = "http://127.0.0.1/MVC/src/Controller/";
         url = url + table_name + 'Controller.php';
 
@@ -148,6 +149,7 @@ function update(tableName, listValues) {
     }
 
     tableName = tableName[0].toUpperCase() + tableName.substr(1);
+    tableName = tableName.replaceAll("_", "");
     let url = "http://127.0.0.1/MVC/src/Controller/";
     url = url + tableName + 'Controller.php';
 
@@ -169,6 +171,7 @@ function createData(tableName, listValues) {
         "operation" : "insert"
     }
     tableName = tableName[0].toUpperCase() + tableName.substr(1);
+    tableName = tableName.replaceAll("_", "");
     let url = "http://127.0.0.1/MVC/src/Controller/";
     url = url + tableName + 'Controller.php';
 
